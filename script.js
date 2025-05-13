@@ -32,7 +32,7 @@ function updateResult() {
   const killaKill = parseInt(localStorage.getItem("killaKill") || "0", 10);
   const raids = parseInt(localStorage.getItem("raids") || "0", 10);
 
-  const totalSpawns = killaDa + killaKill;
+  const totalSpawns = killaKill;
   const percentage = raids > 0 ? ((totalSpawns / raids) * 100).toFixed(2) : 0;
 
   document.getElementById(
