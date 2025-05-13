@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Killa Statistik Counter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgamepedia.cursecdn.com%2Fescapefromtarkov_gamepedia%2Fa%2Fac%2FKilla_Portrait.png&f=1&nofb=1&ipt=2805925d4c668bf1411b90e8d1128427ccb04bce308bdc0a5794e50c642c875c"
+    />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <main class="container">
+      <h1>Killa Statistik Counter</h1>
+
+      <section class="counters">
+        <div class="counter">
+          <h2>Raids</h2>
+          <div class="controls">
+            <button onclick="changeCounter('raids', -1)">−</button>
+            <input
+              type="number"
+              id="raids"
+              min="0"
+              onchange="setCounter('raids')"
+            />
+            <button onclick="changeCounter('raids', 1)">+</button>
+          </div>
+        </div>
+
+        <div class="counter">
+          <h2>Killa war da</h2>
+          <div class="controls">
+            <button onclick="changeCounter('killaDa', -1)">−</button>
+            <input
+              type="number"
+              id="killaDa"
+              min="0"
+              onchange="setCounter('killaDa')"
+            />
+            <button onclick="changeCounter('killaDa', 1)">+</button>
+          </div>
+        </div>
+
+        <div class="counter">
+          <h2>Killa bekommen</h2>
+          <div class="controls">
+            <button onclick="changeCounter('killaKill', -1)">−</button>
+            <input
+              type="number"
+              id="killaKill"
+              min="0"
+              onchange="setCounter('killaKill')"
+            />
+            <button onclick="changeCounter('killaKill', 1)">+</button>
+          </div>
+        </div>
+
+        <div class="counter">
+          <h2>Raids ohne Killa</h2>
+          <div class="controls">
+            <button onclick="changeCounter('noKilla', -1)">−</button>
+            <input
+              type="number"
+              id="noKilla"
+              min="0"
+              onchange="setCounter('noKilla')"
+            />
+            <button onclick="changeCounter('noKilla', 1)">+</button>
+          </div>
+        </div>
+
+        <div class="counter">
+          <h2>Killa Kills Gesamt</h2>
+          <div class="controls">
+            <input
+              type="number"
+              id="totalKills"
+              min="0"
+              max="100"
+              onchange="updateTotalKills()"
+            />
+            <span id="killsLeft">Noch 100 Kills nötig!</span>
+          </div>
+        </div>
+      </section>
+
+      <div id="resultText">Killa war 0% der Raids da.</div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
